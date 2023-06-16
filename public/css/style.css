@@ -33,10 +33,11 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
+  flex-direction: column;
 }
 
 .navbar ul li {
-  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .navbar a {
@@ -51,8 +52,6 @@ body {
 
 /* Showcase */
 .showcase {
-  height: 450px;
-  width: 100%;
   background: var(--primary-color);
 }
 
@@ -68,14 +67,13 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  padding: 1rem;
 }
 
 .showcase form input,
-form select {
+.showcase form select {
   font-size: 20px;
-  width: 500px;
+  width: 100%;
   max-width: 500px;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -114,4 +112,12 @@ img {
   font-size: 1.6rem;
   text-align: center;
   margin-top: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .showcase form input,
+  .showcase form select {
+    max-width: 100%;
+  }
 }
